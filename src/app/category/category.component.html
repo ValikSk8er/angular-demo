@@ -1,0 +1,11 @@
+<div style="margin-left: 30px">
+<div>
+  <h3>Category name: {{category.categoryName}}</h3>
+</div>
+
+<div *ngFor="let p of category.productList" style="margin-top: 20px">
+  <h4>Product name: <a href="/product/{{p.id}}">{{p.productName}}</a></h4>
+  <p>Description: {{p.description}}</p>
+  <p>Price: {{p.price}}</p>
+</div>
+</div>

@@ -1,7 +1,9 @@
-<p>
-  categories works!
-</p>
+<div style="margin-left: 30px">
+  <div>
+    <h2>Categories:</h2>
+  </div>
 
-<div>
-  <h2 *ngFor="let c of categories" > {{c.categoryName}}</h2>
+  <div *ngFor="let c of categories" >
+    <h3><a href="/category/{{c.id}}">{{c.categoryName}}</a></h3>
+  </div>
 </div>

@@ -1,3 +1,5 @@
+import {Product} from './product';
+
 export class Category {
-  constructor(categoryName: string) {}
+  constructor(id: number, categoryName: string, productList: Array<Product>) {}
 }

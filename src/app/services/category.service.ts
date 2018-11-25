@@ -9,8 +9,13 @@ import {HttpClient} from '@angular/common/http';
 export class CategoryService {
 
   constructor(private http: HttpClient) { }
+
   public getAllCategories(): Observable<Array<Category>> {
     return this.http.get<Array<Category>>('http://localhost:8080/category');
       // .subscribe();
+  }
+
+  public getCategoryById(id: number): Observable<Category> {
+    return this.http.get<Category>('http://localhost:8080/category/' + id);
   }
 }

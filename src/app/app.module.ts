@@ -8,17 +8,20 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule, Routes} from '@angular/router';
 import { RegistrationComponent } from './registration/registration.component';
 import {FormsModule} from '@angular/forms';
+import { CategoryComponent } from './category/category.component';
 
 const appRouts: Routes = [
-  {path: 'categories', component: CategoriesComponent},
-  {path: 'registration', component: RegistrationComponent}
+  {path: 'category', component: CategoriesComponent},
+  {path: 'registration', component: RegistrationComponent},
+  { path: 'category/:id', component: CategoryComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoriesComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CategoryComponent
   ],
   imports: [
     RouterModule.forRoot(
